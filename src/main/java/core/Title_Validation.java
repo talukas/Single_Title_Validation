@@ -12,6 +12,11 @@ import org.openqa.selenium.JavascriptExecutor;
 public class Title_Validation {
 	
 	public static void main(String[] args) {
+		
+          //if (args.length == 0) {
+			//System.err.println("No arguments!");
+			//System.exit(1);
+		//}
 
 		WebDriver driver = new FirefoxDriver();    // Version 1.1 :: Firefox
 		// Test Case ID
@@ -21,8 +26,13 @@ public class Title_Validation {
 		String useragent = (String) ((JavascriptExecutor) driver).executeScript("return navigator.userAgent;");
 		Matcher m_browser = Pattern.compile(useragentregex).matcher(useragent);m_browser.find();
 		
-		String url = "https://www.Google.com";
-		String title_expected = "Google";
+		//String url = "https://www.Google.com";
+		//String title_expected = "Google";
+		
+		String param[] = args[0].split("\\|");
+		
+		String url = param[0];
+		String title_expected = param[1];
 		
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

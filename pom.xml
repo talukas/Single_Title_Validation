@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>HW_31</groupId>
-  <artifactId>Single_Title_Validation</artifactId>
+  <groupId>core</groupId>
+  <artifactId>Title_Validation</artifactId>
  <!--  <version>0.0.2</version> -->
  <version>${test.version}</version>
   <packaging>jar</packaging>
@@ -23,7 +23,7 @@
       <scope>test</scope>
     </dependency>
      <dependency>
-    			<groupId>org.seleniumhq.selenium</groupId>
+    <groupId>org.seleniumhq.selenium</groupId>
     			<artifactId>selenium-java</artifactId>
     			<version>2.52.0</version>
 			</dependency>
@@ -37,8 +37,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-						<!--	<mainClass>core.App</mainClass> -->
-							<mainClass>${mainClass}</mainClass>
+						<mainClass>core.Title_Validation</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
